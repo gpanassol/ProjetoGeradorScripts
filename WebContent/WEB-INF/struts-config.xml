@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts-config PUBLIC
+          "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN"
+          "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+
+          
+<struts-config>
+	
+	<form-beans>
+		<form-bean name="GeradorForm" type="br.com.nautical.servlet.struts.FormBean" />
+	</form-beans>
+	
+	<action-mappings>
+		<action path="/Gerador" input="/jsp/0001/index.jsp" parameter="method" scope="session" name="GeradorForm" type="br.com.nautical.servlet.struts.Acao">
+			<forward name="chamador" path="/jsp/0001/index.jsp" />
+		</action>
+	</action-mappings>
+
+</struts-config>
